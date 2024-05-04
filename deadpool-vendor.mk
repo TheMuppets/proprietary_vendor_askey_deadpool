@@ -12,5 +12,4 @@ PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/8efb1e1c-37e5-4326-a5d6-8c33726c7d57.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/8efb1e1c-37e5-4326-a5d6-8c33726c7d57.ta \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/9a04f079-9840-4286-ab92-e65be0885f95.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/9a04f079-9840-4286-ab92-e65be0885f95.ta \
-    vendor/askey/deadpool/proprietary/vendor/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta \
-    vendor/askey/deadpool/proprietary/vendor/usr/keylayout/Vendor_0001_Product_0001.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/Vendor_0001_Product_0001.kl
+    vendor/askey/deadpool/proprietary/vendor/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta
