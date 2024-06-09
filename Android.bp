@@ -15,3 +15,12 @@ dex_import {
 	soc_specific: true,
 }
 
+prebuilt_etc_xml {
+	name: "android.hardware.graphics.composer@2.4-service.droidlogic",
+	owner: "askey",
+	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml",
+	filename_from_src: true,
+	sub_dir: "vintf/manifest",
+	soc_specific: true,
+}
+
