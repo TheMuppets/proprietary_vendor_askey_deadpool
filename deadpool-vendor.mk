@@ -11,6 +11,7 @@ PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/odm/etc/tvconfig/pq/pq_default.ini:$(TARGET_COPY_OUT_ODM)/etc/tvconfig/pq/pq_default.ini \
     vendor/askey/deadpool/proprietary/odm/lib/libHwAudio_dcvdec.so:$(TARGET_COPY_OUT_ODM)/lib/libHwAudio_dcvdec.so \
     vendor/askey/deadpool/proprietary/odm/lib/libHwAudio_dtshd.so:$(TARGET_COPY_OUT_ODM)/lib/libHwAudio_dtshd.so \
+    vendor/askey/deadpool/proprietary/vendor/bin/hw/android.hardware.security.keymint-service.amlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service.amlogic \
     vendor/askey/deadpool/proprietary/vendor/etc/nrdp_audio_platform_capabilities.json:$(TARGET_COPY_OUT_VENDOR)/etc/nrdp_audio_platform_capabilities.json \
     vendor/askey/deadpool/proprietary/vendor/etc/nrdp_audio_platform_capabilities_ms12.json:$(TARGET_COPY_OUT_VENDOR)/etc/nrdp_audio_platform_capabilities_ms12.json \
     vendor/askey/deadpool/proprietary/vendor/etc/nrdp_platform_capabilities.json:$(TARGET_COPY_OUT_VENDOR)/etc/nrdp_platform_capabilities.json \
@@ -29,7 +30,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/vendor/bin/hdcp_tx22:$(TARGET_COPY_OUT_VENDOR)/bin/hdcp_tx22 \
     vendor/askey/deadpool/proprietary/vendor/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.graphics.composer@2.4-service.droidlogic \
-    vendor/askey/deadpool/proprietary/vendor/bin/hw/android.hardware.security.keymint-service.amlogic:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.security.keymint-service.amlogic \
     vendor/askey/deadpool/proprietary/vendor/bin/systemcontrol:$(TARGET_COPY_OUT_VENDOR)/bin/systemcontrol \
     vendor/askey/deadpool/proprietary/vendor/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@2.4-service.droidlogic.rc \
     vendor/askey/deadpool/proprietary/vendor/etc/init/systemcontrol.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/systemcontrol.rc \
