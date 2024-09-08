@@ -16,7 +16,7 @@ dex_import {
 }
 
 prebuilt_etc_xml {
-	name: "android.hardware.graphics.composer@2.4-service.droidlogic",
+	name: "android.hardware.graphics.composer@2.4-service.droidlogic.xml",
 	owner: "askey",
 	src: "proprietary/vendor/etc/vintf/manifest/android.hardware.graphics.composer@2.4-service.droidlogic.xml",
 	filename_from_src: true,

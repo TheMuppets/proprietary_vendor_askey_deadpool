@@ -49,4 +49,4 @@ PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/vendor/lib/vendor.amlogic.hardware.tvserver@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.amlogic.hardware.tvserver@1.0.so
 
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service.droidlogic
+    android.hardware.graphics.composer@2.4-service.droidlogic.xml
