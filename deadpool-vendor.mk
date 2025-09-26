@@ -9,6 +9,7 @@ PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/odm/etc/firmware/firmware.le:$(TARGET_COPY_OUT_ODM)/etc/firmware/firmware.le \
     vendor/askey/deadpool/proprietary/odm/etc/tvconfig/pq/pq.db:$(TARGET_COPY_OUT_ODM)/etc/tvconfig/pq/pq.db \
     vendor/askey/deadpool/proprietary/odm/etc/tvconfig/pq/pq_default.ini:$(TARGET_COPY_OUT_ODM)/etc/tvconfig/pq/pq_default.ini \
+    vendor/askey/deadpool/proprietary/product/etc/permissions/privapp-permissions-deadpool.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-deadpool.xml \
     vendor/askey/deadpool/proprietary/vendor/etc/drm/playready/bgroupcert.dat:$(TARGET_COPY_OUT_VENDOR)/etc/drm/playready/bgroupcert.dat \
     vendor/askey/deadpool/proprietary/vendor/etc/drm/playready/zgpriv.dat:$(TARGET_COPY_OUT_VENDOR)/etc/drm/playready/zgpriv.dat \
     vendor/askey/deadpool/proprietary/vendor/etc/drm/playready/zgpriv_protected.dat:$(TARGET_COPY_OUT_VENDOR)/etc/drm/playready/zgpriv_protected.dat \
@@ -34,6 +35,7 @@ PRODUCT_PACKAGES += \
     libteec \
     libHwAudio_dcvdec \
     libHwAudio_dtshd \
+    DeadpoolService \
     droidlogic.software.core \
     android.hardware.oemlock@1.0-service.droidlogic.xml \
     android.hardware.security.keymint-service.amlogic.xml \
