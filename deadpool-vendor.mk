@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/e043cde0-61d0-11e5-9c26-0002a5d5c51b.ta
 
 PRODUCT_PACKAGES += \
+    libGLES_mali \
     liboemcrypto \
     libplayready \
     libplayreadymediadrmplugin \
@@ -45,3 +46,6 @@ PRODUCT_PACKAGES += \
     android.hardware.security.keymint-service.amlogic \
     tee-supplicant \
     tee_preload_fw
+
+PRODUCT_PACKAGES += \
+    vendor_lib_hw_vulkan_amlogic_so
