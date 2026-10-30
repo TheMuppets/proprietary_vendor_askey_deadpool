@@ -1,16 +1,17 @@
 on early-init
-	insmod /vendor/lib/modules/optee.ko
-	insmod /vendor/lib/modules/optee_armtz.ko
+	insmod /vendor/lib/optee.ko
+	insmod /vendor/lib/optee_armtz.ko
 
-on init
-	chmod 666 /dev/tee0
-	chmod 666 /dev/teepriv0
+on late-init
 	start vendor.tee_supplicant
+
+on init && property:ro.boot.slot_suffix=""
+    write /sys/class/tee_info/sys_boot_complete 1
 
 on post-fs
 	restorecon_recursive /mnt/vendor/tee
 
-on post-fs-data
+on property:vold.post_fs_data_done=1
 	start vendor.tee_supplicant
 
 service vendor.tee_supplicant /vendor/bin/tee-supplicant
@@ -18,3 +19,4 @@ service vendor.tee_supplicant /vendor/bin/tee-supplicant
 	user root
 	group system
 	seclabel u:r:tee:s0
+	shutdown critical

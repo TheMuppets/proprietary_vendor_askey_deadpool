@@ -20,17 +20,20 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib/egl/libGLES_mali.so",
             ],
             shared_libs: [
+                "android.hardware.graphics.allocator-V2-ndk",
+                "libbinder_ndk",
                 "libnativewindow",
                 "libutils",
-                "liblog",
-                "libdmabufheap",
-                "libz",
-                "libcutils",
-                "arm.graphics-V1-ndk_platform",
                 "android.hardware.graphics.mapper@4.0",
                 "libgralloctypes",
                 "libhidlbase",
+                "liblog",
+                "libcutils",
                 "libhardware",
+                "android.hardware.graphics.common-V7-ndk",
+                "libbase",
+                "libdmabufheap",
+                "libz",
                 "libc++",
                 "libc",
                 "libm",
@@ -40,6 +43,161 @@ cc_prebuilt_library_shared {
     },
     compile_multilib: "32",
     relative_install_path: "egl",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_android_keymaster_akeymint_utils",
+    owner: "askey",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/lib_android_keymaster_akeymint_utils.so",
+            ],
+            shared_libs: [
+                "android.hardware.security.keymint-V3-ndk",
+                "libbase",
+                "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libacppcose_rkp",
+    owner: "askey",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libacppcose_rkp.so",
+            ],
+            shared_libs: [
+                "libcppbor_external",
+                "libcrypto",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libakeymint",
+    owner: "askey",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libakeymint.so",
+            ],
+            shared_libs: [
+                "android.hardware.security.keymint-V3-ndk",
+                "libhidlbase",
+                "android.hardware.security.rkp-V3-ndk",
+                "android.hardware.security.secureclock-V1-ndk",
+                "android.hardware.security.sharedsecret-V1-ndk",
+                "lib_android_keymaster_akeymint_utils",
+                "libbase",
+                "libbinder_ndk",
+                "libcppbor_external",
+                "libcrypto",
+                "libcutils",
+                "libkeymaster_messages",
+                "libkeymaster_portable",
+                "liblog",
+                "libpuresoftkeymasterdevice",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libakeymint_remote_prov_support",
+    owner: "askey",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libakeymint_remote_prov_support.so",
+            ],
+            shared_libs: [
+                "android.hardware.security.keymint-V3-ndk",
+                "libbase-v33",
+                "libbinder_ndk",
+                "libcppbor_external",
+                "libacppcose_rkp",
+                "libcrypto",
+                "libkeymaster_portable",
+                "libjsoncpp",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libamavutils",
+    owner: "askey",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/lib/libamavutils.so",
+            ],
+            shared_libs: [
+                "libutils",
+                "libcutils",
+                "libc",
+                "libbinder",
+                "liblog",
+                "libui",
+                "libc++",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
     prefer: true,
     soc_specific: true,
 }
@@ -198,80 +356,6 @@ cc_prebuilt_library_shared {
     soc_specific: true,
 }
 
-cc_prebuilt_library_shared {
-    name: "libteec",
-    owner: "askey",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/lib/libteec.so",
-            ],
-            shared_libs: [
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libHwAudio_dcvdec",
-    owner: "askey",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/odm/lib/libHwAudio_dcvdec.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "libcutils",
-                "liblog",
-                "libm",
-                "libc++",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    device_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libHwAudio_dtshd",
-    owner: "askey",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/odm/lib/libHwAudio_dtshd.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    prefer: true,
-    device_specific: true,
-}
-
 android_app_import {
     name: "DeadpoolService",
     owner: "askey",
@@ -284,15 +368,6 @@ android_app_import {
     product_specific: true,
 }
 
-dex_import {
-    name: "droidlogic.software.core",
-    owner: "askey",
-    jars: [
-        "proprietary/vendor/framework/droidlogic.software.core.jar",
-    ],
-    soc_specific: true,
-}
-
 prebuilt_etc_xml {
     name: "android.hardware.oemlock@1.0-service.droidlogic.xml",
     owner: "askey",
@@ -303,9 +378,9 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "android.hardware.security.keymint-service.amlogic.xml",
+    name: "android.hardware.security.keymint-service-no-rkp.amlogic.xml",
     owner: "askey",
-    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.security.keymint-service.amlogic.xml",
+    src: "proprietary/vendor/etc/vintf/manifest/android.hardware.security.keymint-service-no-rkp.amlogic.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     soc_specific: true,
@@ -400,18 +475,26 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/android.hardware.security.keymint-service.amlogic",
             ],
             shared_libs: [
-                "android.hardware.security.keymint-V4-ndk",
-                "android.hardware.security.secureclock-V1-ndk",
+                "android.hardware.security.keymint-V3-ndk",
+                "android.hardware.security.rkp-V3-ndk",
+                "lib_android_keymaster_akeymint_utils",
                 "android.hardware.security.sharedsecret-V1-ndk",
-                "lib_android_keymaster_keymint_utils",
+                "android.hardware.security.secureclock-V1-ndk",
                 "libbase",
                 "libbinder_ndk",
                 "libhardware",
                 "libkeymaster_messages",
-                "libkeymint",
+                "libakeymint",
                 "liblog",
                 "libtrusty",
                 "libteec",
+                "libtinyxml2",
+                "libcutils",
+                "libjsoncpp",
+                "libakeymint_remote_prov_support",
+                "libcppbor_external",
+                "libcppcose_rkp",
+                "libcrypto",
                 "libc++",
                 "libc",
                 "libm",
@@ -454,6 +537,57 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "tee_hdcp",
+    owner: "askey",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/tee_hdcp",
+            ],
+            shared_libs: [
+                "libteec",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "tee_key_inject",
+    owner: "askey",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/tee_key_inject",
+            ],
+            shared_libs: [
+                "libteec",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "tee_preload_fw",
     owner: "askey",
     target: {
@@ -464,6 +598,31 @@ cc_prebuilt_binary {
             shared_libs: [
                 "libteec",
                 "libtee_load_video_fw",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "32",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "tee_provision",
+    owner: "askey",
+    target: {
+        android_arm: {
+            srcs: [
+                "proprietary/vendor/bin/tee_provision",
+            ],
+            shared_libs: [
+                "libprovision",
                 "libc++",
                 "libc",
                 "libm",

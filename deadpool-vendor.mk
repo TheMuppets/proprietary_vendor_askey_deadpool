@@ -17,9 +17,10 @@ PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/vendor/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.oemlock@1.0-service.droidlogic.rc \
     vendor/askey/deadpool/proprietary/vendor/etc/init/android.hardware.security.keymint-service.amlogic.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint-service.amlogic.rc \
     vendor/askey/deadpool/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
+    vendor/askey/deadpool/proprietary/vendor/etc/init/tee_hdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_hdcp.rc \
+    vendor/askey/deadpool/proprietary/vendor/etc/init/tee_key_inject.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_key_inject.rc \
     vendor/askey/deadpool/proprietary/vendor/etc/init/tee_preload_fw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_preload_fw.rc \
     vendor/askey/deadpool/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.amlogic.xml \
-    vendor/askey/deadpool/proprietary/vendor/etc/permissions/droidlogic.software.core.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/droidlogic.software.core.xml \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/2c1a33c0-44cc-11e5-bc3b-0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/2c1a33c0-44cc-11e5-bc3b-0002a5d5c51b.ta \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/8efb1e1c-37e5-4326-a5d6-8c33726c7d57.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/8efb1e1c-37e5-4326-a5d6-8c33726c7d57.ta \
@@ -28,24 +29,28 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libGLES_mali \
+    lib_android_keymaster_akeymint_utils \
+    libacppcose_rkp \
+    libakeymint \
+    libakeymint_remote_prov_support \
+    libamavutils \
     liboemcrypto \
     libplayready \
     libplayreadymediadrmplugin \
     libsecmem \
     libtee_load_video_fw \
-    libteec \
-    libHwAudio_dcvdec \
-    libHwAudio_dtshd \
     DeadpoolService \
-    droidlogic.software.core \
     android.hardware.oemlock@1.0-service.droidlogic.xml \
-    android.hardware.security.keymint-service.amlogic.xml \
+    android.hardware.security.keymint-service-no-rkp.amlogic.xml \
     manifest_android.hardware.drm@1.4-service.playready.xml \
     android.hardware.drm@1.4-service.playready \
     android.hardware.oemlock@1.0-service.droidlogic \
     android.hardware.security.keymint-service.amlogic \
     tee-supplicant \
-    tee_preload_fw
+    tee_hdcp \
+    tee_key_inject \
+    tee_preload_fw \
+    tee_provision
 
 PRODUCT_PACKAGES += \
     vendor_lib_hw_vulkan_amlogic_so
