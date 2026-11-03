@@ -22,11 +22,11 @@ PRODUCT_COPY_FILES += \
     vendor/askey/deadpool/proprietary/vendor/etc/init/tee_key_inject.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_key_inject.rc \
     vendor/askey/deadpool/proprietary/vendor/etc/init/tee_preload_fw.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee_preload_fw.rc \
     vendor/askey/deadpool/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.amlogic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.amlogic.xml \
-    vendor/askey/deadpool/proprietary/vendor/firmware/wifi/config_bcm4356a2_ag.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/config_bcm4356a2_ag.txt \
-    vendor/askey/deadpool/proprietary/vendor/firmware/wifi/fw_bcm4356a2_ag.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4356a2_ag.bin \
-    vendor/askey/deadpool/proprietary/vendor/firmware/wifi/fw_bcm4356a2_ag_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4356a2_ag_apsta.bin \
-    vendor/askey/deadpool/proprietary/vendor/firmware/wifi/fw_bcm4356a2_ag_p2p.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/fw_bcm4356a2_ag_p2p.bin \
-    vendor/askey/deadpool/proprietary/vendor/firmware/wifi/nvram_ap6356.txt:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi/nvram_ap6356.txt \
+    vendor/askey/deadpool/proprietary/vendor/lib/firmware/config_bcm4356a2_ag.txt:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/config_bcm4356a2_ag.txt \
+    vendor/askey/deadpool/proprietary/vendor/lib/firmware/fw_bcm4356a2_ag.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/fw_bcm4356a2_ag.bin \
+    vendor/askey/deadpool/proprietary/vendor/lib/firmware/fw_bcm4356a2_ag_apsta.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/fw_bcm4356a2_ag_apsta.bin \
+    vendor/askey/deadpool/proprietary/vendor/lib/firmware/fw_bcm4356a2_ag_p2p.bin:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/fw_bcm4356a2_ag_p2p.bin \
+    vendor/askey/deadpool/proprietary/vendor/lib/firmware/nvram_ap6356.txt:$(TARGET_COPY_OUT_VENDOR)/lib/firmware/nvram_ap6356.txt \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/2c1a33c0-44cc-11e5-bc3b-0002a5d5c51b.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/2c1a33c0-44cc-11e5-bc3b-0002a5d5c51b.ta \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/526fc4fc-7ee6-4a12-96e3-83da9565bce8.ta \
     vendor/askey/deadpool/proprietary/vendor/lib/teetz/8efb1e1c-37e5-4326-a5d6-8c33726c7d57.ta:$(TARGET_COPY_OUT_VENDOR)/lib/teetz/8efb1e1c-37e5-4326-a5d6-8c33726c7d57.ta \
